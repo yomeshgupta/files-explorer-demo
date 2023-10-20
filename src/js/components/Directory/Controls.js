@@ -12,7 +12,9 @@ const Controls = ({
     const { currentTarget } = e;
     const action = currentTarget.getAttribute('data-action');
 
-    onAction(action);
+    if (onAction && typeof onAction === "function") {
+      onAction(action);
+    }
   };
 
   return (
@@ -54,7 +56,7 @@ Controls.defaultProps = {
   canRemove: false,
   canCreateFile: true,
   canCreateFolder: true,
-  onAction: () => { },
+  onAction: null,
 };
 
 export default Controls;

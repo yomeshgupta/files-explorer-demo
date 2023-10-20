@@ -28,7 +28,7 @@ const htmlPluginEntries = templateFiles.map((template) => new HTMLWebpackPlugin(
 
 module.exports = {
   entry: {
-    app: path.resolve(environment.paths.source, 'js', 'app.js'),
+    app: path.resolve(environment.paths.source, 'js', 'index.js'),
   },
   output: {
     filename: 'js/[name].js',
@@ -41,7 +41,7 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
       },
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         use: ['babel-loader'],
       },

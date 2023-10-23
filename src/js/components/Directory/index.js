@@ -47,7 +47,7 @@ const Directory = () => {
           </div>
           <Controls
             canEdit={false}
-            onControlItemClick={handleControlItemClick}
+            onAction={handleControlItemClick}
           />
         </div>
         {state.showContents ? (

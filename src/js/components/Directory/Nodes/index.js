@@ -123,7 +123,7 @@ const Node = ({ type, name, id, children, level, isNew }) => {
           </div>
           <Controls
             {...config.controls}
-            onControlItemClick={handleControlItemClick}
+            onAction={handleControlItemClick}
           />
         </div>
       </div>
